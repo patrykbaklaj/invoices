@@ -1,3 +1,14 @@
-body {
-    background: black;
+@import "~bootstrap/scss/bootstrap";
+
+.header {
+    background-image: url('../assets/images/budget-background-edit.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 340px;
+    color: #fff;
+    
+    .display-3 {
+        font-size: 1.6em;
+    }
 }

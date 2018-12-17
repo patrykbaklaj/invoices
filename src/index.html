@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Invoice</title>
 </head>
+
 <body>
-    <h1>To może działać</h1>
+    <header class="header">
+        <div class="container text-center">
+            <h1 class="display-3 p-4">Budżet dostępny w miesiącu <span class="budget__date font-weight-bold"></span></h1>
+            <h2 class="display-4 p-2">-0.00 <span class="budget__date font-weight-bold"></span></h2>
+            <div class="row justify-content-center">
+                <div class="col-md-2 col-sm-6">
+                    <div class="alert alert-primary" role="alert">
+                        VAT do zapłaty
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <div class="alert alert-primary" role="alert">
+                        dochodowy
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+
+                <div class="w-100"></div>
+                <div class="col-md-6 col-sm-8">
+                    <div class="alert alert-success" role="alert">
+                        Całkowite przychody
+                    </div>
+                </div>
+                <!-- <div class="col-2">
+                    <div class="alert alert-success" role="alert">
+                        VAT
+                    </div>
+                </div> -->
+                <div class="w-100"></div>
+                <div class="col-md-6 col-sm-8">
+                    <div class="alert alert-danger" role="alert">
+                        Całkowite wydatki
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 </body>
+
 </html>
