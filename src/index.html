@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header pb-4">
         <div class="container text-center">
             <h1 class="display-3 p-4">Budżet dostępny w miesiącu <span class="budget__date font-weight-bold"></span></h1>
             <h2 class="display-4 p-2">-0.00 <span class="budget__date font-weight-bold"></span></h2>
@@ -47,6 +47,42 @@
             </div>
         </div>
     </header>
+
+    <section class="form pt-4 pb-4">
+        <div class="container">
+            <form class="text-center">
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <!-- <label for="inputState">State</label> -->
+                        <select id="invoice__type" class="form-control" id="invoice-type">
+                            <option selected value="income">Sprzedaż</option>
+                            <option value="expense">Zakup</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" id="invoice-description" placeholder="Dodaj skrótowy opis faktury">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="number" class="form-control" id="invoice-net" placeholder="Kwota netto">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <!-- <label for="inputState">State</label> -->
+                        <select id="invoice__type" class="form-control" id="invoice-tax">
+                            <option value="" selected>% VAT</option>
+                            <option value="0">0%</option>
+                            <option value="8">8%</option>
+                            <option value="23">23%</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="number" class="form-control" id="invoice-gross" placeholder="Kwota netto">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn text-muted btn-sm ">Dodaj fakturę</button>
+            </form>
+        </div>
+    </section>
 
 </body>
 
