@@ -14,23 +14,39 @@
             <h1 class="display-3 p-4">Budżet dostępny w miesiącu <span class="budget__date font-weight-bold"></span></h1>
             <h2 class="display-4 p-2">-0.00 <span class="budget__date font-weight-bold"></span></h2>
             <div class="row justify-content-center">
-                <div class="col-md-2 col-sm-6">
-                    <div class="alert alert-primary" role="alert">
-                        VAT do zapłaty
+                <div class="col-md-3 col-sm-6">
+                    <div class="alert alert-primary d-flex justify-content-between" role="alert">
+                        <div class="">
+                            VAT
+                        </div>
+                        <div>
+                            3,459 zł
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="alert alert-primary" role="alert">
-                        dochodowy
+                <div class="col-md-3 col-sm-6">
+                    <div class="alert alert-primary d-flex justify-content-between" role="alert">
+                        <div class="">
+                            CIT
+                        </div>
+                        <div>
+                            1,259 zł
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
 
                 <div class="w-100"></div>
-                <div class="col-md-6 col-sm-8">
-                    <div class="alert alert-success" role="alert">
-                        Całkowite przychody
+                <div class="col-md-6 col-sm-12">
+                    <div class="alert alert-success d-flex justify-content-between" role="alert">
+                        <div>
+                            <p>Całkowite przychody</p>
+                        </div>
+                        <div class="total__incomes">
+                            <p class="total__incomes-value"><strong>+ </strong>29,159</p>
+                            <i></i>
+                        </div>
                     </div>
                 </div>
                 <!-- <div class="col-2">
@@ -39,33 +55,43 @@
                     </div>
                 </div> -->
                 <div class="w-100"></div>
-                <div class="col-md-6 col-sm-8">
-                    <div class="alert alert-danger" role="alert">
-                        Całkowite wydatki
+                <div class="col-md-6 col-sm-12">
+                    <div class="alert alert-danger d-flex justify-content-between align-items-center" role="alert">
+                        <div>
+                            <p>Całkowite wydatki</p>
+                        </div>
+                        <div class="total__expenses">
+                            <p class="total__expenses-value"><span><strong>- </strong></span>20,234</p>
+                            <i></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="form pt-4 pb-4">
+    <section class="form pt-5 pb-5 bg-light">
         <div class="container">
             <form class="text-center">
                 <div class="form-row">
-                    <div class="form-group col-md-2">
+                    <div class="form-group col-12 col-md-3">
                         <!-- <label for="inputState">State</label> -->
                         <select id="invoice__type" class="form-control" id="invoice-type">
                             <option selected value="income">Sprzedaż</option>
                             <option value="expense">Zakup</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-12 col-md-3">
+                            <input type="text" class="form-control" id="invoice-number" placeholder="Numer faktury">
+                        </div>
+                    <div class="form-group col-12 col-md-6">
                         <input type="text" class="form-control" id="invoice-description" placeholder="Dodaj skrótowy opis faktury">
                     </div>
-                    <div class="form-group col-md-2">
-                        <input type="number" class="form-control" id="invoice-net" placeholder="Kwota netto">
+                    <div class="form-group col-12 col-md-4">
+                        <input type="number" class="form-control" id="invoice-net" placeholder="Kwota netto" min="0"
+                            step="1">
                     </div>
-                    <div class="form-group col-md-2">
+                    <div class="form-group col-12 col-md-4">
                         <!-- <label for="inputState">State</label> -->
                         <select id="invoice__type" class="form-control" id="invoice-tax">
                             <option value="" selected>% VAT</option>
@@ -74,13 +100,33 @@
                             <option value="23">23%</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-2">
-                        <input type="number" class="form-control" id="invoice-gross" placeholder="Kwota netto">
+                    <div class="form-group col-12 col-md-4">
+                        <input type="number" class="form-control" id="invoice-gross" placeholder="Kwota brutto" min="0" step="1">
                     </div>
                 </div>
 
-                <button type="submit" class="btn text-muted btn-sm ">Dodaj fakturę</button>
+                <button type="submit" class="btn btn-sm text-light bg-secondary">Dodaj fakturę</button>
             </form>
+        </div>
+    </section>
+
+    <section class="invoice__list pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="invoice__list-incomes col-md-6 col-sm-12">
+                    <h3 class="h3 text-success">Przychodzy</h3>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi amet id deleniti molestiae
+                    mollitia perferendis distinctio et dicta aspernatur, aliquid quibusdam totam maiores recusandae,
+                    nobis odit reprehenderit. Quae, voluptatum aliquam.
+                </div>
+
+                <div class="invoice__list-expenses col-md-6 col-sm-12">
+                    <h3 class="h3 text-danger">Wydatki</h3>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non optio iure, exercitationem dolore,
+                    eius numquam delectus quasi ab, praesentium atque quibusdam reiciendis ea officia inventore facere
+                    corrupti id doloremque libero.
+                </div>
+            </div>
         </div>
     </section>
 
