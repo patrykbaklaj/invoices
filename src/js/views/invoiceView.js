@@ -8,7 +8,7 @@ export const getInput = () => {
         description: DOMStrings.invoiceDescription.value,
         netAmount: DOMStrings.invoiceNet.value,
         taxPercentage: DOMStrings.invoiceTax.value,
-        netGross: DOMStrings.invoiceGross.value
+        grossAmount: DOMStrings.invoiceGross.value
     };
 };
 

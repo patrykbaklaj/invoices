@@ -1,7 +1,8 @@
 export default class Invoice {
 
-    constructor(id, number, description, net, tax, gross) {
+    constructor(id, type, number, description, net, tax, gross) {
         this.id = id;
+        this.type = type;
         this.number = number;
         this.description = description;
         this.net = net;

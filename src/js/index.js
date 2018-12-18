@@ -1,7 +1,6 @@
 import {DOMStrings} from './views/base';
 import {setDate} from './controllers/mainViewCtrl';
-import {getInput} from './views/invoiceView';
-import {handleInvoiceInput} from './controllers/invoiceCtrl';
+import {createNewInvoice} from './controllers/invoiceCtrl';
 
 /* 
                 MAIN CONTROLLER 
@@ -12,4 +11,11 @@ setDate(DOMStrings.budgetDate);
 
 
 // Set event listeners and controllers
-handleInvoiceInput();
+
+
+// SET EVENT LISTENER TO ADD INVOICE
+DOMStrings.entireForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // CREATE NEW INVOICE
+    createNewInvoice();
+});

@@ -1,12 +1,15 @@
-import {DOMStrings} from '../views/base';
-import {getInput} from '../views/invoiceView';
+import {
+    getInput
+} from '../views/invoiceView';
+import Invoice from '../models/Invoice';
+const getUid = require('get-uid');
 
-
-export const handleInvoiceInput = () => {
-    // getInput for testing purpose only
-    DOMStrings.entireForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        console.log(getInput());
-    });  
+export const createNewInvoice = () => {
+    const inputData = getInput();
+    const ID = getUid();
+    if (ID && inputData.number && inputData.description && inputData.netAmount && inputData.grossAmount) {
+        const invoice = new Invoice(ID, inputData.type, inputData.number, inputData.description, inputData.netAmount, inputData.taxPercentage, inputData.grossAmount);
+        console.log(invoice);
+        return invoice;
+    }
 };
-
