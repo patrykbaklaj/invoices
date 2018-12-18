@@ -82,8 +82,8 @@
                         </select>
                     </div>
                     <div class="form-group col-12 col-md-3">
-                            <input type="text" class="form-control" id="invoice-number" placeholder="Numer faktury">
-                        </div>
+                        <input type="text" class="form-control" id="invoice-number" placeholder="Numer faktury">
+                    </div>
                     <div class="form-group col-12 col-md-6">
                         <input type="text" class="form-control" id="invoice-description" placeholder="Dodaj skrótowy opis faktury">
                     </div>
@@ -101,7 +101,8 @@
                         </select>
                     </div>
                     <div class="form-group col-12 col-md-4">
-                        <input type="number" class="form-control" id="invoice-gross" placeholder="Kwota brutto" min="0" step="1">
+                        <input type="number" class="form-control" id="invoice-gross" placeholder="Kwota brutto" min="0"
+                            step="1">
                     </div>
                 </div>
 
@@ -114,17 +115,43 @@
         <div class="container">
             <div class="row">
                 <div class="invoice__list-incomes col-md-6 col-sm-12">
-                    <h3 class="h3 text-success">Przychodzy</h3>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi amet id deleniti molestiae
-                    mollitia perferendis distinctio et dicta aspernatur, aliquid quibusdam totam maiores recusandae,
-                    nobis odit reprehenderit. Quae, voluptatum aliquam.
+                    <h3 class="h3 text-success mb-5 text-center">Przychodzy</h3>
+                    <div class="card mb-3 shadow bg-white rounded">
+                        <div class="card-header bg-success text-white">
+                            Numer faktury
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Opis faktury: Some quick example text to build on the card title and make up the bulk
+                                of the card's content.
+                            </h5>
+                            <div class="row">
+                                <div class="col"><span>Netto: </span>100,00 zł</div>
+                                <div class="col"><span>VAT: </span>23,00 zł</div>
+                                <div class="col"><span>Netto: </span>123,00 zł</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="invoice__list-expenses col-md-6 col-sm-12">
-                    <h3 class="h3 text-danger">Wydatki</h3>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non optio iure, exercitationem dolore,
-                    eius numquam delectus quasi ab, praesentium atque quibusdam reiciendis ea officia inventore facere
-                    corrupti id doloremque libero.
+                    <h3 class="h3 text-danger mb-5 text-center">Wydatki</h3>
+                    <div class="card mb-3 shadow bg-white rounded">
+                        <div class="card-header bg-danger text-white">
+                            Numer faktury
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Opis faktury: Some quick example text to build on the card title and make up the bulk
+                                of the card's content.
+                            </h5>
+                            <div class="row">
+                                <div class="col"><span>Netto: </span>100,00 zł</div>
+                                <div class="col"><span>VAT: </span>23,00 zł</div>
+                                <div class="col"><span>Netto: </span>123,00 zł</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
