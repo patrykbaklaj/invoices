@@ -9,7 +9,11 @@ export const DOMStrings = {
     invoiceNet: document.getElementById('invoice-net'),
     invoiceTax: document.getElementById('invoice-tax'),
     invoiceGross: document.getElementById('invoice-gross'),
-    submitButton: document.querySelector('button[type="submit"]')
+    submitButton: document.querySelector('button[type="submit"]'),
+
+    // invoice list elements
+    invoiceListIncomes: document.querySelector('.invoice__list-incomes'),
+    invoiceListExpenses: document.querySelector('.invoice__list-expenses')
 
 }
 
