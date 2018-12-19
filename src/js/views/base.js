@@ -13,7 +13,14 @@ export const DOMStrings = {
 
     // invoice list elements
     invoiceListIncomes: document.querySelector('.invoice__list-incomes'),
-    invoiceListExpenses: document.querySelector('.invoice__list-expenses')
+    invoiceListExpenses: document.querySelector('.invoice__list-expenses'),
 
-}
+    // budget elements
+    totalBudget: document.querySelector('.total__budget'),
+    totalIncomes: document.querySelector('.total__incomes-value'),
+    totalExpenses: document.querySelector('.total__expenses-value'),
+    vatAmount: document.querySelector('.vat'),
+    citAmount: document.querySelector('.cit')
+
+};
 
