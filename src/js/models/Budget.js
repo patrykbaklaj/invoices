@@ -46,10 +46,10 @@ export default class Budget {
         }
 
         // calculate CIT to be paid (NET Incomes - NET expenses) * cit-tax
-        this.cit = (this.incomesNet - this.expensesNet) * 0.15;
+        this.cit = ((this.incomesNet - this.expensesNet) * 0.15).toFixed(2);
 
         // calculate VAT to be paid (VAT from incomes - VAT from expenses)
-        this.vat = (this.incomesGross - this.incomesNet) - (this.expensesGross - this.expensesNet);
+        this.vat = ((this.incomesGross - this.incomesNet) - (this.expensesGross - this.expensesNet)).toFixed(2);
 
         // calculate Total Budget Net (Total Net incomes - Total Net expenses)
         this.total = this.incomesNet - this.expensesNet;
