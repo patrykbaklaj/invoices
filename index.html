@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice</title>
+</head>
+
+<body>
+    <header class="header pb-4">
+        <div class="container text-center">
+            <h1 class="display-3 p-4">Budżet dostępny w miesiącu <span class="budget__date font-weight-bold"></span></h1>
+            <h2 class="display-4 p-2 total__budget">-0.00</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-3 col-sm-6">
+                    <div class="alert alert-primary d-flex justify-content-between" role="alert">
+                        <div>
+                            VAT
+                        </div>
+                        <div class="vat">
+                            <!-- 3,459 zł -->
+                            0
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="alert alert-primary d-flex justify-content-between" role="alert">
+                        <div>
+                            CIT
+                        </div>
+                        <div class="cit">
+                            <!-- 1,259 zł -->
+                            0
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+
+                <div class="w-100"></div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="alert alert-success d-flex justify-content-between" role="alert">
+                        <div>
+                            <p>Całkowite przychody</p>
+                        </div>
+                        <div class="total__incomes">
+                            <p class="total__incomes-value"><strong>+ </strong>
+                                <!-- 29,159 -->
+                                0
+                            </p>
+                            <i></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-2">
+                    <div class="alert alert-success" role="alert">
+                        VAT
+                    </div>
+                </div> -->
+                <div class="w-100"></div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="alert alert-danger d-flex justify-content-between align-items-center" role="alert">
+                        <div>
+                            <p>Całkowite wydatki</p>
+                        </div>
+                        <div class="total__expenses">
+                            <p class="total__expenses-value"><span><strong>- </strong></span>
+                                <!-- 20,234 -->
+                                0
+                            </p>
+                            <i></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-5 pb-5 bg-light">
+        <div class="container">
+            <form class="form text-center">
+                <div class="form-row">
+                    <div class="form-group col-12 col-md-3">
+                        <!-- <label for="inputState">State</label> -->
+                        <select class="form-control" id="invoice-type">
+                            <option selected value="income">Sprzedaż</option>
+                            <option value="expense">Zakup</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12 col-md-3">
+                        <input type="text" class="form-control" id="invoice-number" placeholder="Numer faktury">
+                    </div>
+                    <div class="form-group col-12 col-md-6">
+                        <input type="text" class="form-control" id="invoice-description" placeholder="Dodaj skrótowy opis faktury">
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                        <input type="number" class="form-control" id="invoice-net" placeholder="Kwota netto" step='0.01'>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                        <!-- <label for="inputState">State</label> -->
+                        <select class="form-control" id="invoice-tax">
+                            <option value="0">Stawka VAT: 0%</option>
+                            <option value="8">Stawka VAT: 8%</option>
+                            <option value="23" selected>Stawka VAT: 23%</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                        <input type="number" class="form-control" id="invoice-gross" placeholder="Kwota brutto" min="0"
+                            step="0.01">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-sm text-light bg-secondary">Dodaj fakturę</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="invoice__list pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="invoice__list-incomes col-md-6 col-sm-12">
+                    <!-- <h3 class="h3 text-success mb-5 text-center">Przychodzy</h3> -->
+                    <!-- <div class="card mb-3 shadow bg-white rounded">
+                        <div class="card-header bg-success text-white">
+                            Numer faktury
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Opis faktury: Some quick example text to build on the card title and make up the bulk
+                                of the card's content.
+                            </h5>
+                            <div class="row">
+                                <div class="col"><span>Netto: </span>100,00 zł</div>
+                                <div class="col"><span>VAT: </span>23,00 zł</div>
+                                <div class="col"><span>Netto: </span>123,00 zł</div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="invoice__list-expenses col-md-6 col-sm-12">
+                    <!-- <h3 class="h3 text-danger mb-5 text-center">Wydatki</h3> -->
+                    <!-- <div class="card mb-3 shadow bg-white rounded">
+                        <div class="card-header bg-danger text-white">
+                            Numer faktury
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Opis faktury: Some quick example text to build on the card title and make up the bulk
+                                of the card's content.
+                            </h5>
+                            <div class="row">
+                                <div class="col"><span>Netto: </span>100,00 zł</div>
+                                <div class="col"><span>VAT: </span>23,00 zł</div>
+                                <div class="col"><span>Netto: </span>123,00 zł</div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script type="text/javascript" src="./dist/js/bundle.js"></script></body>
+
+</html>
