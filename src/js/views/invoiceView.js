@@ -1,4 +1,6 @@
-import {DOMStrings} from './base';
+import {
+    DOMStrings
+} from './base';
 
 
 export const getInput = () => {
@@ -13,6 +15,12 @@ export const getInput = () => {
 };
 
 
+export const clearFields = () => {
+        DOMStrings.invoiceNumber.value = "";
+        DOMStrings.invoiceDescription.value = "";
+        DOMStrings.invoiceNet.value = 0.00;
+        DOMStrings.invoiceGross.value = 0.00;
+}
 
 
 // Function to change gross and net amounts when one of them change on UI
@@ -22,12 +30,12 @@ const setNetOrGross = (net, gross, tax) => {
     [net, gross, tax].forEach(el => el.addEventListener('change', (e) => {
         net.value = parseFloat(net.value).toFixed(2);
         gross.value = parseFloat(gross.value).toFixed(2);
-        if(e.target.id === 'invoice-net' || e.target.id === 'invoice-tax'){
+        if (e.target.id === 'invoice-net' || e.target.id === 'invoice-tax') {
             gross.value = (net.value * (1 + tax.value / 100)).toFixed(2);
         } else if (e.target.id === 'invoice-gross') {
             net.value = (gross.value / (1 + tax.value / 100)).toFixed(2);
-        } 
-    }));    
+        }
+    }));
 };
 
 setNetOrGross(DOMStrings.invoiceNet, DOMStrings.invoiceGross, DOMStrings.invoiceTax);

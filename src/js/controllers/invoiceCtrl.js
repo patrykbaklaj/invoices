@@ -1,5 +1,6 @@
 import {
-    getInput
+    getInput, 
+    clearFields
 } from '../views/invoiceView';
 import Invoice from '../models/Invoice';
 const getUid = require('get-uid');
@@ -12,4 +13,7 @@ export const createNewInvoice = () => {
         console.log(invoice);
         return invoice;
     }
+
+    clearFields();
+
 };
